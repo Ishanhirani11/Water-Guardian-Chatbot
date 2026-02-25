@@ -1,7 +1,11 @@
 from google import genai
 from google.genai import types
+from dotenv import load_dotenv
+import os
 
-API_KEY = "AIzaSyBtYTdqTUlAJ552no2NSVeRjBooIzLCdxk"
+load_dotenv()
+
+API_KEY = os.getenv("API")
 
 # Define the "Water Guardian"
 SYSTEM_INSTRUCTION = """
